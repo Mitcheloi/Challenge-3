@@ -1,0 +1,115 @@
+/*MOBILE FIRST*/
+
+body {
+  margin: 5vh 5vw;
+  font-family: helvetica, sans-serif;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 48%, rgba(0,212,255,1) 100%);
+  display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"-			logo"
+	"uitleg		uitleg"
+	"locatie1	locatie1"
+	"locatie2	locatie2"
+	"locatie3	locatie3"
+	"map		map";
+}
+
+#logo {
+	grid-area: logo;
+	height: 10vh;
+}
+#map {
+	grid-area: map;
+  height: 80vh;
+  width: 90vw;
+  border-radius: 6px;
+}
+
+#article {
+	grid-area: uitleg;
+	color: white;
+}
+
+#locatie1 {
+	grid-area: locatie1;
+}
+
+#locatie2 {
+	grid-area: locatie2;
+}
+
+#locatie3 {
+	grid-area: locatie3;
+}
+
+#introtekst {
+	color: #2c2e5c;
+}
+
+#veilig {
+	color: green;
+}
+
+#gevaarlijk {
+	color: red;
+}
+
+#locatie1, #locatie2, #locatie3 {
+	color: white;
+	background-color: #195ab0;
+	height: 3vh;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 1vh;
+}
+
+/*/*IPAD*//*IPAD*//*IPAD*//*IPAD*//*IPAD*/
+@media only screen and (min-width: 640px) {
+	body {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 2vw;
+	grid-template-areas: 
+	"uitleg		uitleg			logo"
+	"locatie1	locatie2		locatie3"
+	"map		map				map";
+	}
+
+	#logo {
+		justify-self: end;
+	}
+}
+
+
+
+@media only screen and (min-width: 940px) {
+	body {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+	"locatie1	locatie2	locatie3	logo"
+	"uitleg		uitleg		-			-"
+	"map		map			map			map";	
+	}
+
+	#logo {
+		justify-self: end;
+	}
+
+	#locatie1, #locatie2, #locatie3 {
+		align-self: center;
+	}
+
+	#map {
+		height: 75vh;
+	}
+
+}
+
+
+
+@media only screen and (min-width: 2020px) {
+	body {
+		max-width: 1600px;
+		margin: auto;
+	}
